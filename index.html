@@ -6,32 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
 </head>
 <body id="background">
     <form id="login-main">
         <div id="logins">
             <section id="login-id">
-                <input type="text" placeholder="ID를 입력하세요">
+                <input type="text" placeholder="ID를 입력하세요" class="textbox">
             </section>
             <section id="login-password">
-                <input type="text" placeholder="PASSWORD를 입력하세요.">
+                <input type="text" placeholder="PASSWORD를 입력하세요." class="textbox">
             </section>
             <section id="login-password-rcf">
-                <input type="text" placeholder="PASSWORD를 다시 입력하세요.">
+                <input type="text" placeholder="PASSWORD를 다시 입력하세요." class="textbox">
             </section>
             <section id="login-email">
-                <input type="text" placeholder="E-mail을 입력하세요.">
+                <input type="text" placeholder="E-mail을 입력하세요." class="textbox">
             </section>
             <section id="login-telephone">
-                <input type="text" placeholder="전화번호를 입력하세요.">
+                <input type="text" placeholder="전화번호를 입력하세요." class="textbox">
             </section>
             <section id="login-mobile">
-                <input type="text" placeholder="휴대폰 번호를 입력하세요.">
+                <input type="text" placeholder="휴대폰 번호를 입력하세요." class="textbox">
             </section>
             <section id="login-checkboxes">
-                    <input type="checkbox" name="tou" id="tou-checkbox">
+                    <input type="checkbox" name="tou" id="tou-checkbox" class="checkbox">
                     <label for="tou-checkbox">이용약관에 동의합니다.</label><br>
-                    <input type="checkbox" name="cpi" id="cpi-checkbox">
+                    <input type="checkbox" name="cpi" id="cpi-checkbox"class="checkbox">
                     <label for="cpi-checkbox">개인정보수집에 동의합니다.</label>
             </section>
             <section id="login-select">
@@ -47,14 +48,14 @@
             </section>
             <section id="login-codenum">
                 <div id="login-codenum-input-mobile">
-                    <input type="text" placeholder="전화번호를 입력하세요.">
+                    <input type="text" placeholder="전화번호를 입력하세요." class="textbox-codenum">
                     <button id="codenum-send">인증번호발송</button>
                 </div>
                 <div id="codenum-output">
-                    <span></span>    
+                    <span>12323</span>    
                 </div>
-                <div id="login-codenum-input">
-                    <input type="text" placeholder="인증번호를 입력하세요.">
+                <div id="login-codenum-input" >
+                    <input type="text" placeholder="인증번호를 입력하세요." class="textbox-codenum">
                     <button id="codenum-check">확인</button>
                 </div>
             </section>

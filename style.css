@@ -2,5 +2,38 @@
     background-color: seashell;
 }
 #login-main {
+    border: 3px solid black;
+    height: 400px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 
+}
+#logins {
+    text-align: center;
+    margin-top: 17px;
+}    
+.textbox {
+    width: 200px;
+}
+#codenum-output {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(106, 86, 125);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.textbox-codenum {
+    width: 150px;
+}
+#codenum-output span{
+    height: 100px;
+}
+.checkbox {
+    display: block;
+    margin: auto;
 }
