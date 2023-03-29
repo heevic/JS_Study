@@ -1,39 +1,79 @@
-#background {
-    background-color: seashell;
+a {
+    text-decoration: none;
+    color: black;
 }
-#login-main {
-    border: 3px solid black;
-    height: 400px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
 
+span {
+    font-size: 10px;
 }
-#logins {
+ul {
+}
+li {
+    list-style: none;
+}
+
+h1 {
     text-align: center;
-    margin-top: 17px;
-}    
-.textbox {
-    width: 200px;
 }
-#codenum-output {
-    width: 200px;
-    height: 50px;
-    background-color: rgb(106, 86, 125);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
+
+/* CLASS */
+.divide-box {
+    margin-top: 10px;
+}
+.items-box {
 
 }
-.textbox-codenum {
-    width: 150px;
+.btn {
 }
-#codenum-output span{
-    height: 100px;
+.checkbox-input {
+    
 }
-.checkbox {
-    display: block;
+
+/* ID */
+#all {
+    width: 100%;
+}
+header {
+    margin: auto;    
+}
+
+form {
+    border: 3px solid black;
+}
+#container {
+}
+#content {
+}
+#register-content {
     margin: auto;
+}
+
+#id-box {
+
+}
+#psw-box {
+
+}
+#pswconfirm-box {
+
+}
+#email-box {
+
+}
+#telnum-box{
+
+}
+#code-box {
+
+}
+#codenum-box {
+    background-color: rgb(173, 173, 173);
+    width: 130px;
+    height: 35px;
+}
+#checkbox-box {
+
+}
+#registerbtn-box{
+
 }
