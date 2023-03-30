@@ -7,44 +7,45 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="main.js"></script>
 <body>
     <div id="all">
         <header id="logo">
             <h1>회원가입</h1>
         </header>
-        <form action="#">
+        <form action="#" onsubmit="return checkdata()">
             <div id="container">
                 <div id="content">
                     <div id="register-content">
                         <div class="items-box">
                             <div id="id-box" class="divide-box">
                                 <b>ID</b><br>
-                                <span id="id">
-                                    <input type="text" class="text-input">
+                                <span id="id-span">
+                                    <input type="text" class="text-input" id="id">
                                 </span>
                             </div>
                         </div>
                         <div class="items-box">
                             <div id="psw-box" class="divide-box">
                                 <b>PASSWORD</b><br>
-                                <span class="psw">
-                                    <input type="password" class="text-input">
+                                <span class="psw-span">
+                                    <input type="password" class="text-input" id="psw">
                                 </span>
                             </div>
                             <div class="pswconfirm-box" class="divide-box">
                                 <b>PASSWORD COMFIRM</b><br>
-                                <span class="psw-confirm">
-                                    <input type="password" class="text-input">
+                                <span class="psw-confirm-span">
+                                    <input type="password" class="text-input" id="psw-confirm">
                                 </span>
                             </div>
                         </div>
                         <div class="items-box">
                             <div id="email-box" class="divide-box">
                                 <b>E-Mail</b><br>
-                                <span class="email">
-                                    <input type="text" class="text-input" id="email1">
+                                <span class="email-span">
+                                    <input type="text" class="text-input-email" id="email1">
                                     <b>@</b>
-                                    <input type="text" class="text-input" id="email2">
+                                    <input type="text" class="text-input-email" id="email2">
                                     <select id="mail" class="select-input">
                                         <option value>직접입력</option>
                                         <option value="naver">naver.com</option>
@@ -55,7 +56,7 @@
                             </div>
                             <div id="telnum-box" class="divide-box">
                                 <b>Tellephone Number</b><br>
-                                <span class="telnum">
+                                <span class="telnum-span">
                                     <select id="telnum-area">
                                         <option value>02</option>
                                         <option value="031">031</option>
@@ -64,7 +65,7 @@
                                         <option value="043">043</option>
                                         <option value="044">044</option>
                                     </select>
-                                    <input type="text" class="text-input">
+                                    <input type="text" class="text-input" id="telnum">
                                 </span>
                             </div>
                             <!--  -->
@@ -72,41 +73,44 @@
                         <div class="items-box">
                             <div id="code-box" class="divide-box">
                                 <b>Mobile Number</b><br>
-                                <span class="mobile">
-                                    <input type="text" class="text-input">
+                                <span class="mobile-span">
+                                    <input type="text" class="text-input" id="mobile">
                                 </span>
-                                <button id="codebtn">
+                                <button id="codebtn" onclick="codenum()">
                                     <span>인증번호 받기</span>
                                 </button>
                                 <div id="codenum-box">
                                     <span id="codenum">
-                                        <h1>000000</h1>
+                                        <h1 id="random-number"></h1>
                                     </span>
                                 </div>
                                 <div id="codenuminput-box" class="divide-box">
                                     <b>인증번호입력</b><br>
-                                    <span id="codenuminput">
-                                        <input type="text" class="text-input">
+                                    <span id="codenuminput-span">
+                                        <input type="text" class="text-input" id="codenuminput">
                                     </span>
-                                    <button id="codenumbtn">
+                                    <!-- codenumbtn은 생성한 번호와 입력한 번호가 일치할 때 나타나야함 -->
+                                    <button id="codenumbtn" onclick="codenumimport()"> 
                                         <span>인증</span>
                                     </button>
+                                    <b id="result"></b>
                                 </div>
                             </div>
                         </div>
                     
                         <div class="items-box">
+                            <!-- 체크박스 둘 다 체크해야 REGISTER버튼 활성화 -->
                             <div id="checkbox-box" class="divide-box">
                                 <ul id="checkboxes">
                                     <li>
                                         <span>
-                                            <input type="checkbox" class="checkbox-input">
+                                            <input type="checkbox" class="checkbox-input" id="checkbox1">
                                             <b>이용약관 동의</b>
                                         </span>
                                     </li>
                                     <li>
                                         <span>
-                                            <input type="checkbox" class="checkbox-input">
+                                            <input type="checkbox" class="checkbox-input" id="checkbox2">
                                             <b>개인정보 수집 및 이용 동의</b>
                                         </span>
                                     </li>
@@ -114,10 +118,12 @@
                             </div>
                         </div>
                         <div class="items-box">
+                            <!-- 모든조건 만족 후 누르면 모달 팝업창 띄우기 -->
                             <div id="registerbtn-box" class="divide-box">
-                                <button id="register-btn">
+                                <button id="registerbtn">
                                     <span>REGISTER</span>
                                 </button>
+                                <b id="errorMessage"></b>
                             </div>
                         </div>
                     </div>

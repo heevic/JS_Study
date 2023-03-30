@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(66, 132, 65);
+}
 a {
     text-decoration: none;
     color: black;
@@ -15,6 +18,9 @@ li {
 h1 {
     text-align: center;
 }
+b {
+    
+}
 
 /* CLASS */
 .divide-box {
@@ -23,10 +29,18 @@ h1 {
 .items-box {
 
 }
-.btn {
+.btn span{
 }
 .checkbox-input {
     
+}
+.text-input {
+    width: 150px;
+    border: 3px solid black;
+}
+.text-input-email {
+    width: 100px;
+    border: 3px solid black;
 }
 
 /* ID */
@@ -38,13 +52,17 @@ header {
 }
 
 form {
-    border: 3px solid black;
+    
 }
 #container {
+    text-align: center;
 }
 #content {
 }
 #register-content {
+    border: 3px solid black;
+    width: 350px;
+    height: 570px;
     margin: auto;
 }
 
@@ -70,6 +88,7 @@ form {
     background-color: rgb(173, 173, 173);
     width: 130px;
     height: 35px;
+    margin: auto;
 }
 #checkbox-box {
 
