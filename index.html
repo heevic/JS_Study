@@ -23,20 +23,31 @@
                                 <span id="id-span">
                                     <input type="text" class="text-input" id="id">
                                 </span>
+                                <div class="essentialbox">
+                                    <span id="essential-id" class="essential"></span>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="items-box">
                             <div id="psw-box" class="divide-box">
                                 <b>PASSWORD</b><br>
                                 <span class="psw-span">
-                                    <input type="password" class="text-input" id="psw">
-                                </span>
+                                    <input type="password" class="text-input" id="psw">         
+                                </span><br>
+                                <div class="essentialbox">
+                                    <span id="essential-psw" class="essential"></span> 
+                                </div>
                             </div>
-                            <div class="pswconfirm-box" class="divide-box">
+
+                            <div id="pswconfirm-box" class="divide-box">
                                 <b>PASSWORD COMFIRM</b><br>
                                 <span class="psw-confirm-span">
                                     <input type="password" class="text-input" id="psw-confirm">
                                 </span>
+                                <div class="essentialbox">
+                                    <span id="essential-pswconfirm" class="essential"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="items-box">
@@ -45,14 +56,17 @@
                                 <span class="email-span">
                                     <input type="text" class="text-input-email" id="email1">
                                     <b>@</b>
-                                    <input type="text" class="text-input-email" id="email2">
-                                    <select id="mail" class="select-input">
+                                    <input type="text" class="text-input-email" id="email2" value="">
+                                    <select id="mail" class="btnorselect">
                                         <option value>직접입력</option>
                                         <option value="naver">naver.com</option>
                                         <option value="gmail">gmail.com</option>
                                         <option value="daum">daum.net</option>
                                     </select>
                                 </span>
+                                <div class="essentialbox">
+                                    <span id="essential-email" class="essential"></span>
+                                </div>
                             </div>
                             <div id="telnum-box" class="divide-box">
                                 <b>Tellephone Number</b><br>
@@ -67,6 +81,9 @@
                                     </select>
                                     <input type="text" class="text-input" id="telnum">
                                 </span>
+                                <div class="essentialbox">
+                                    <span id="essential-telnum" class="essential"></span>
+                                </div>
                             </div>
                             <!--  -->
                         </div>
@@ -76,9 +93,13 @@
                                 <span class="mobile-span">
                                     <input type="text" class="text-input" id="mobile">
                                 </span>
-                                <button id="codebtn" onclick="codenum()">
+                                <button id="codebtn" onclick="codenum()" class="btnorselect" role="button">
                                     <span>인증번호 받기</span>
                                 </button>
+                                <div class="essentialbox">
+                                    <span id="essential-mobile" class="essential"></span>
+                                </div>
+                                
                                 <div id="codenum-box">
                                     <span id="codenum">
                                         <h1 id="random-number"></h1>
@@ -86,14 +107,16 @@
                                 </div>
                                 <div id="codenuminput-box" class="divide-box">
                                     <b>인증번호입력</b><br>
-                                    <span id="codenuminput-span">
+                                    <span id="codenuminput-span" class="btnorselect">
                                         <input type="text" class="text-input" id="codenuminput">
                                     </span>
                                     <!-- codenumbtn은 생성한 번호와 입력한 번호가 일치할 때 나타나야함 -->
-                                    <button id="codenumbtn" onclick="codenumimport()"> 
+                                    <button id="codenumbtn" onclick="codenumimport()" class="btnorselect"> 
                                         <span>인증</span>
                                     </button>
-                                    <b id="result"></b>
+                                    <div class="essentialbox">
+                                        <span class="essential" id="code-result"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -103,26 +126,23 @@
                             <div id="checkbox-box" class="divide-box">
                                 <ul id="checkboxes">
                                     <li>
-                                        <span>
-                                            <input type="checkbox" class="checkbox-input" id="checkbox1">
-                                            <b>이용약관 동의</b>
-                                        </span>
+                                        <input type="checkbox" class="checkbox-input" id="checkbox1" onclick="checkbox()">                                           
+                                        <label for="checkbox1" class="checkbox-font" >이용약관 동의</label>   
                                     </li>
-                                    <li>
-                                        <span>
-                                            <input type="checkbox" class="checkbox-input" id="checkbox2">
-                                            <b>개인정보 수집 및 이용 동의</b>
-                                        </span>
+                                    <li> 
+                                        <input type="checkbox" class="checkbox-input" id="checkbox2" onclick="checkbox()">
+                                        <label for="checkbox2" class="checkbox-font">개인정보 수집 및 이용 동의</label>
                                     </li>
                                 </ul>
+                                <div class="essentialbox">
+                                    <span class="essential" id="essential-checkbox"></span>
+                                </div>
                             </div>
                         </div>
                         <div class="items-box">
                             <!-- 모든조건 만족 후 누르면 모달 팝업창 띄우기 -->
                             <div id="registerbtn-box" class="divide-box">
-                                <button id="registerbtn">
-                                    <span>REGISTER</span>
-                                </button>
+                                <button type="submit" id="registerbtn" disabled>회원가입</button>
                                 <b id="errorMessage"></b>
                             </div>
                         </div>
@@ -130,6 +150,17 @@
                 </div>
             </div>
         </form>
+    </div>
+    <!-- 모달 -->
+    <div id="modal" class="modal">
+        <div class="modal-window">
+            <div class="modal-title">
+                <h2>회원가입 성공</h2>
+            </div>
+            <div class="modal-content">
+                <b>가입이 완료되었습니다.</b>
+            </div>
+        </div>
     </div>
 </body>
 </html>

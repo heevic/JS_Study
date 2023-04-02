@@ -34,13 +34,46 @@ b {
 .checkbox-input {
     
 }
+.email-span {
+}
+.email-span b {
+    font-size: 20px;
+}
 .text-input {
-    width: 150px;
+    width: 350px;
     border: 3px solid black;
+    height: 35px;
+    margin: auto;
 }
 .text-input-email {
-    width: 100px;
+    width: 170px;
+    height: 35px;
     border: 3px solid black;
+        
+}
+.btnorselect {
+    width: 100px;
+    height: 35px;
+}
+.btnorselect span {
+    font-size: 12px;
+}
+.checkbox-input {
+
+}
+.checkbox-font {
+    font-size: 15px;
+}
+.essentialbox {
+    margin: auto;
+    width: 300px;
+    height: 15px;
+    
+}
+.essential {
+    color: rgb(218, 64, 64);
+    font-weight: bold;
+    
 }
 
 /* ID */
@@ -61,8 +94,8 @@ form {
 }
 #register-content {
     border: 3px solid black;
-    width: 350px;
-    height: 570px;
+    width: 650px;
+    height: 830px;
     margin: auto;
 }
 
@@ -93,6 +126,51 @@ form {
 #checkbox-box {
 
 }
+#checkboxes {
+    text-align: left;
+}
+#checkboxes li {
+    margin-left: 200px;
+}
 #registerbtn-box{
 
+}
+#registerbtn {
+    width: 200px;
+    height: 40px;
+}
+#registerbtn span {
+    font-size: 20px;
+}
+
+
+
+
+
+/* 모달 */
+.modal {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+.modal-window {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: beige;
+    width: 250px;
+    height: 150px;
+    padding: 20px;
+}
+.modal-title {
+    text-align: center;
+}
+.modal-content {
+    text-align: center;
 }
