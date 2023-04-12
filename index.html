@@ -2,165 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <script src="main.js"></script>
 <body>
-    <div id="all">
-        <header id="logo">
-            <h1>회원가입</h1>
-        </header>
-        <form action="#" onsubmit="return checkdata()">
-            <div id="container">
-                <div id="content">
-                    <div id="register-content">
-                        <div class="items-box">
-                            <div id="id-box" class="divide-box">
-                                <b>ID</b><br>
-                                <span id="id-span">
-                                    <input type="text" class="text-input" id="id">
-                                </span>
-                                <div class="essentialbox">
-                                    <span id="essential-id" class="essential"></span>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="items-box">
-                            <div id="psw-box" class="divide-box">
-                                <b>PASSWORD</b><br>
-                                <span class="psw-span">
-                                    <input type="password" class="text-input" id="psw">         
-                                </span><br>
-                                <div class="essentialbox">
-                                    <span id="essential-psw" class="essential"></span> 
-                                </div>
-                            </div>
-
-                            <div id="pswconfirm-box" class="divide-box">
-                                <b>PASSWORD COMFIRM</b><br>
-                                <span class="psw-confirm-span">
-                                    <input type="password" class="text-input" id="psw-confirm">
-                                </span>
-                                <div class="essentialbox">
-                                    <span id="essential-pswconfirm" class="essential"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-box">
-                            <div id="email-box" class="divide-box">
-                                <b>E-Mail</b><br>
-                                <span class="email-span">
-                                    <input type="text" class="text-input-email" id="email1">
-                                    <b>@</b>
-                                    <input type="text" class="text-input-email" id="email2" value="">
-                                    <select id="mail" class="btnorselect">
-                                        <option value>직접입력</option>
-                                        <option value="naver">naver.com</option>
-                                        <option value="gmail">gmail.com</option>
-                                        <option value="daum">daum.net</option>
-                                    </select>
-                                </span>
-                                <div class="essentialbox">
-                                    <span id="essential-email" class="essential"></span>
-                                </div>
-                            </div>
-                            <div id="telnum-box" class="divide-box">
-                                <b>Tellephone Number</b><br>
-                                <span class="telnum-span">
-                                    <select id="telnum-area">
-                                        <option value>02</option>
-                                        <option value="031">031</option>
-                                        <option value="032">032</option>
-                                        <option value="033">033</option>
-                                        <option value="043">043</option>
-                                        <option value="044">044</option>
-                                    </select>
-                                    <input type="text" class="text-input" id="telnum">
-                                </span>
-                                <div class="essentialbox">
-                                    <span id="essential-telnum" class="essential"></span>
-                                </div>
-                            </div>
-                            <!--  -->
-                        </div>
-                        <div class="items-box">
-                            <div id="code-box" class="divide-box">
-                                <b>Mobile Number</b><br>
-                                <span class="mobile-span">
-                                    <input type="text" class="text-input" id="mobile">
-                                </span>
-                                <button id="codebtn" onclick="codenum()" class="btnorselect" role="button">
-                                    <span>인증번호 받기</span>
-                                </button>
-                                <div class="essentialbox">
-                                    <span id="essential-mobile" class="essential"></span>
-                                </div>
-                                
-                                <div id="codenum-box">
-                                    <span id="codenum">
-                                        <h1 id="random-number"></h1>
-                                    </span>
-                                </div>
-                                <div id="codenuminput-box" class="divide-box">
-                                    <b>인증번호입력</b><br>
-                                    <span id="codenuminput-span" class="btnorselect">
-                                        <input type="text" class="text-input" id="codenuminput">
-                                    </span>
-                                    <!-- codenumbtn은 생성한 번호와 입력한 번호가 일치할 때 나타나야함 -->
-                                    <button id="codenumbtn" onclick="codenumimport()" class="btnorselect"> 
-                                        <span>인증</span>
-                                    </button>
-                                    <div class="essentialbox">
-                                        <span class="essential" id="code-result"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="items-box">
-                            <!-- 체크박스 둘 다 체크해야 REGISTER버튼 활성화 -->
-                            <div id="checkbox-box" class="divide-box">
-                                <ul id="checkboxes">
-                                    <li>
-                                        <input type="checkbox" class="checkbox-input" id="checkbox1" onclick="checkbox()">                                           
-                                        <label for="checkbox1" class="checkbox-font" >이용약관 동의</label>   
-                                    </li>
-                                    <li> 
-                                        <input type="checkbox" class="checkbox-input" id="checkbox2" onclick="checkbox()">
-                                        <label for="checkbox2" class="checkbox-font">개인정보 수집 및 이용 동의</label>
-                                    </li>
-                                </ul>
-                                <div class="essentialbox">
-                                    <span class="essential" id="essential-checkbox"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="items-box">
-                            <!-- 모든조건 만족 후 누르면 모달 팝업창 띄우기 -->
-                            <div id="registerbtn-box" class="divide-box">
-                                <button type="submit" id="registerbtn" disabled>회원가입</button>
-                                <b id="errorMessage"></b>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <!-- 모달 -->
-    <div id="modal" class="modal">
-        <div class="modal-window">
-            <div class="modal-title">
-                <h2>회원가입 성공</h2>
-            </div>
-            <div class="modal-content">
-                <b>가입이 완료되었습니다.</b>
-            </div>
+    <div class="calculator">
+        <input type="text" class="display" value="" readonly >
+        <div class="buttons">
+            <button onclick="Addnum(7)">7</button>
+            <button onclick="Addnum(8)">8</button>
+            <button onclick="Addnum(9)">9</button>
+            <button onclick="Addope('/')">/</button>
+            <button onclick="Addnum(4)">4</button>
+            <button onclick="Addnum(5)">5</button>
+            <button onclick="Addnum(6)">6</button>
+            <button onclick="Addope('*')">*</button>
+            <button onclick="Addnum(1)">1</button>
+            <button onclick="Addnum(2)">2</button>
+            <button onclick="Addnum(3)">3</button>
+            <button onclick="Addope('-')">-</button>
+            <button onclick="Clear()">C</button>
+            <button onclick="Addnum(0)">0</button>
+            <button>.</button>
+            <button onclick="Addope('+')">+</button>
         </div>
+        <button class="equals" onclick="Equalresult()">=</button>
     </div>
 </body>
 </html>

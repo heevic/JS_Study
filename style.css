@@ -1,176 +1,58 @@
 body {
-    background-color: rgb(66, 132, 65);
-}
-a {
-    text-decoration: none;
-    color: black;
-}
-
-span {
-    font-size: 10px;
-}
-ul {
-}
-li {
-    list-style: none;
-}
-
-h1 {
-    text-align: center;
-}
-b {
-    
-}
-
-/* CLASS */
-.divide-box {
-    margin-top: 10px;
-}
-.items-box {
-
-}
-.btn span{
-}
-.checkbox-input {
-    
-}
-.email-span {
-}
-.email-span b {
-    font-size: 20px;
-}
-.text-input {
-    width: 350px;
-    border: 3px solid black;
-    height: 35px;
-    margin: auto;
-}
-.text-input-email {
-    width: 170px;
-    height: 35px;
-    border: 3px solid black;
-        
-}
-.btnorselect {
-    width: 100px;
-    height: 35px;
-}
-.btnorselect span {
-    font-size: 12px;
-}
-.checkbox-input {
-
-}
-.checkbox-font {
-    font-size: 15px;
-}
-.essentialbox {
-    margin: auto;
-    width: 300px;
-    height: 15px;
-    
-}
-.essential {
-    color: rgb(218, 64, 64);
-    font-weight: bold;
-    
-}
-
-/* ID */
-#all {
-    width: 100%;
-}
-header {
-    margin: auto;    
-}
-
-form {
-    
-}
-#container {
-    text-align: center;
-}
-#content {
-}
-#register-content {
-    border: 3px solid black;
-    width: 650px;
-    height: 830px;
-    margin: auto;
-}
-
-#id-box {
-
-}
-#psw-box {
-
-}
-#pswconfirm-box {
-
-}
-#email-box {
-
-}
-#telnum-box{
-
-}
-#code-box {
-
-}
-#codenum-box {
-    background-color: rgb(173, 173, 173);
-    width: 130px;
-    height: 35px;
-    margin: auto;
-}
-#checkbox-box {
-
-}
-#checkboxes {
-    text-align: left;
-}
-#checkboxes li {
-    margin-left: 200px;
-}
-#registerbtn-box{
-
-}
-#registerbtn {
-    width: 200px;
-    height: 40px;
-}
-#registerbtn span {
-    font-size: 20px;
-}
-
-
-
-
-
-/* 모달 */
-.modal {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 1px;
+    background: #000;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.display {
+    grid-column: span 4;
+    height: 80px;
+    background: #222;
+    color: white;
+    text-align: right;
+    padding: 0 10px;
+    font-size: 24px;
+    line-height: 50px;
+    border: none;
+}
+
+button {
+    height: 50px;
+    background: #333;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background: #444;
+}
+
+.equals {
+    grid-column: span 4;
+    background: #119955;
+    width: 100%;
+}
+.buttons {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 1px;
+    background: #000;
+    padding: 1px;
+    border-radius: 5px;
     
-}
-.modal-window {
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: beige;
-    width: 250px;
-    height: 150px;
-    padding: 20px;
-}
-.modal-title {
-    text-align: center;
-}
-.modal-content {
-    text-align: center;
 }
